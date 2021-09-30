@@ -1,0 +1,26 @@
+@import "src/assets/styles/vars";
+@import "src/assets/styles/colors";
+
+.sidebar {
+    flex: 1 1;
+    height: calc(100vh - 40px);
+    position: relative;
+
+    border-left: 1px solid #ccc;
+
+    &__tabs {
+        height: 80px;
+    }
+    &__content {
+        border-top: 1px solid #ccc;
+        height: calc(100% - 200px);
+    }
+    &__controls {
+        border-top: 1px solid #ccc;
+        height: 80px;
+
+        button + button {
+            margin-top: 10px;
+        }
+    }
+}

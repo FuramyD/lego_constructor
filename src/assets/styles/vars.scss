@@ -1,0 +1,37 @@
+$header-height: 40px;
+
+$font-size-s: 11px;
+$font-size-m: 14px;
+$font-size-l: 18px;
+
+$font-height-s: 18px;
+$font-height-m: 20px;
+$font-height-l: 24px;
+
+$default-transition: .15s;
+
+
+
+@mixin font-regular-size-height($size, $height) {
+    font-weight: 400;
+    font-size: $size;
+    line-height: $height;
+}
+
+@mixin font-medium-size-height($size, $height) {
+    font-weight: 500;
+    font-size: $size;
+    line-height: $height;
+}
+
+@mixin font-semi-bold-size-height($size, $height) {
+    font-weight: 600;
+    font-size: $size;
+    line-height: $height;
+}
+
+@mixin font-bold-size-height($size, $height) {
+    font-weight: 700;
+    font-size: $size;
+    line-height: $height;
+}
