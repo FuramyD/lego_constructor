@@ -1,1 +1,1 @@
-LEGO CONSTRUCTOR demo app for startups course
+LEGO CONSTRUCTOR demo app for startups course TEST ATTEMPT TO MAKE THIS FCKTARD GIT WORK PROPERLY!
