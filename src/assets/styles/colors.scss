@@ -3,3 +3,6 @@ $primary-light: #49b0ec;
 
 $text-light: #6d666d;
 $text-base: #181818;
+
+
+$light: lighten($text-light, 40%)

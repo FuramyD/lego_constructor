@@ -3,21 +3,55 @@
 
 .sidebar {
     flex: 1 1;
-    height: calc(100vh - 40px);
+    height: $sidebar-height;
     position: relative;
 
     border-left: 1px solid #ccc;
 
     &__tabs {
-        height: 80px;
+        height: $sidebar-header-height;
+        display: flex;
+        align-items: center;
+
+        padding: 10px 20px;
+
+        &-item + &-item {
+            margin-left: 20px;
+        }
+
+        &-item {
+            color: $text-light;
+            cursor: pointer;
+            @include font-medium-size-height(13px, 20px);
+
+            &._active {
+                color: $primary;
+            }
+        }
     }
+    &__search {
+        border-top: 1px solid #ccc;
+        padding: 8px 20px;
+        height: 50px;
+    }
+
     &__content {
         border-top: 1px solid #ccc;
-        height: calc(100% - 200px);
+        height: $sidebar-content-height;
     }
     &__controls {
         border-top: 1px solid #ccc;
-        height: 80px;
+        height: $sidebar-footer-height;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        flex-direction: column;
+
+        & > button {
+            width: 80%;
+        }
 
         button + button {
             margin-top: 10px;

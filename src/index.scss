@@ -40,20 +40,41 @@ code {
 
     cursor: pointer;
 
-    transition: color $default-transition linear;
+    transition: all $default-transition linear;
 
     &:hover, &:active {
         color: darken($text-light, 12%);
+    }
+
+    &.btn-default {
+        box-shadow: 0 0 7px 1px $light;
+
+        &:active, &:hover {
+            box-shadow: 0 0 7px 1px darken($light, 10%);
+        }
     }
 
     &.btn-primary {
         color: white;
         background-color: $primary;
 
-        transition: background-color $default-transition linear;
-
-        &:hover, &:active {
+        &:active, &:hover {
             background-color: darken($primary, 6%);
         }
     }
+}
+
+._visible {
+    display: block;
+}
+
+._hidden {
+    display: none;
+}
+
+._hidden-v {
+    transition: opacity .2s linear, visibility .2s linear;
+
+    opacity: 0;
+    visibility: hidden;
 }
