@@ -1,0 +1,54 @@
+@import "src/assets/styles/vars";
+@import "src/assets/styles/colors";
+
+.search {
+    position: relative;
+    &__input {
+        input {
+            height: 32px;
+            width: 80%;
+            outline: none;
+            border: 1px solid $light;
+            border-radius: 6px;
+            padding: 6px;
+
+            transition: all $default-transition linear;
+
+            &:focus, &:active, &:hover {
+                border-color: $primary-light;
+            }
+
+            &:focus, &:active {
+                box-shadow: 0 0 4px 1px $primary-light;
+            }
+        }
+    }
+
+    &__list {
+        position: absolute;
+        top: $sidebar-search-height - 10px;
+
+        width: 80%;
+        padding: 10px;
+        background-color: #fff;
+
+        box-shadow: 0 0 10px 3px $light;
+        z-index: 1000;
+
+        &-item {
+            & + & {
+                margin-top: 4px;
+            }
+
+            width: 100%;
+            border-radius: 6px;
+            padding: 2px 12px;
+
+            cursor: pointer;
+
+            &:hover {
+                background-color: lighten($light, 5%);
+            }
+        }
+    }
+}

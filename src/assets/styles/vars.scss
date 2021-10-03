@@ -1,4 +1,13 @@
+$detail-images-size: 100px;
+
 $header-height: 40px;
+$footer-height: 40px;
+
+$sidebar-height: calc(100vh - #{$header-height + $footer-height});
+$sidebar-header-height: 40px;
+$sidebar-search-height: 50px;
+$sidebar-footer-height: 120px;
+$sidebar-content-height: calc(100% - #{$sidebar-header-height + $sidebar-search-height + $sidebar-footer-height});
 
 $font-size-s: 11px;
 $font-size-m: 14px;
